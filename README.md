@@ -1,7 +1,6 @@
 # gozincsearch
 zincsearch的golang的封装库
 
-
 #  暂时支持的接口
 - [x] index
 - [x] delete
