@@ -1,18 +1,3 @@
-# gozincsearch
-zincsearch的golang的封装库
-
-
-#  暂时支持的接口
-- [x] index
-- [x] delete
-- [x] get
-- [x] info
-- [x] search
-- [x] msearch
-
-# 使用例子
-
-```golang
 package gozincsearch_test
 
 import (
@@ -149,5 +134,3 @@ func TestInfo(t *testing.T) {
 	fmt.Println(res5)
 
 }
-
-```
