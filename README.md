@@ -9,7 +9,38 @@ zincsearch的golang的封装库
 - [x] search
 - [x] msearch
 
-# 使用例子
+# 安装
+```
+go get -u github.com/xscan/gozincsearch
+```
+
+# 基本使用例子
+```golang
+package main
+
+import (
+	"fmt"
+
+	"github.com/xscan/gozincsearch"
+)
+
+var client *gozincsearch.Client
+
+func init() {
+	clientBuild := &gozincsearch.ClientBuild{}
+	client = clientBuild.
+		SetApiKey("YWRtaW46Q29tcGxleHBhc3MjMTIz").
+		SetHost("localhost:4080").
+		Build()
+}
+func main() {
+
+	info := client.Info(nil)
+	fmt.Println(info)
+}
+
+```
+# 全部API使用例子
 
 ```golang
 package gozincsearch_test
