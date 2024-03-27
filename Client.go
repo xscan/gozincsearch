@@ -73,7 +73,7 @@ func (cli *Client) Get(params map[string]string) string {
 func (cli *Client) performRequest(endpoint endpoints.AbstractEndpoint) string {
 
 	uri := fmt.Sprintf("http://%s%s", cli.ClientBuild.host, endpoint.GetURI())
-	fmt.Println(uri)
+	// fmt.Println(uri)
 	req, err := http.NewRequest(endpoint.GetMethod(), uri, nil)
 	if endpoint.GetBody() != "" {
 		req, err = http.NewRequest(endpoint.GetMethod(), uri, bytes.NewBuffer([]byte(endpoint.GetBody())))
